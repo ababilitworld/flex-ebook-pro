@@ -1,0 +1,11 @@
+{
+  "name": "ababilitworld/flex-ebook-pro",
+  "description": "Tree rendering system for ebooks with SOLID principles",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "AbabilItWorld\\FlexEbookPro\\": "src/"
+    }
+  },
+  "require": {}
+}

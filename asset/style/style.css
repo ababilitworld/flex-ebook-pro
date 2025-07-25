@@ -1,0 +1,157 @@
+/* ========== Reset & Base ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #8e9eab);
+    color: #2c3e50;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  
+  /* ========== Layout ========== */
+  .ebook {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px;
+  }
+  
+  /* ========== Index Panel ========== */
+  .index {
+    flex: 1 1 300px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 25px;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  
+  .index h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 25px;
+  }
+  
+  /* ========== Content Panel ========== */
+  .content {
+    flex: 2 1 600px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    min-height: 400px;
+  }
+  
+  .content-details {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f0faff;
+    border-left: 5px solid #007BFF;
+    border-radius: 8px;
+  }
+  
+  /* ========== Accordion Styles ========== */
+  .accordion-button {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #fff;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .accordion-button:hover {
+    filter: brightness(1.1);
+  }
+  
+  .accordion-button.open {
+    background: linear-gradient(135deg, #0056b3, #004494);
+  }
+  
+  /* ========== Accordion Arrow Connector ========== */
+  .accordion-content {
+    display: none;
+    margin-left: 30px;
+    padding-left: 15px;
+    border-left: 2px dashed #007BFF;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .accordion-button.open + .accordion-content {
+    display: block;
+  }
+  
+  /* Horizontal connector from button to vertical line */
+  .accordion-button::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background-color: #007BFF;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .accordion-button.open::before {
+    opacity: 1;
+  }
+  
+  /* Vertical line going down into nested accordion */
+  .accordion-button + .accordion-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 2px;
+    height: 100%;
+    background-color: #007BFF;
+    opacity: 0.7;
+  }
+  
+  /* ========== Transitions ========== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ========== Responsive ========== */
+  @media (max-width: 768px) {
+    .ebook {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .index,
+    .content {
+      width: 100%;
+    }
+  
+    .index {
+      max-height: unset;
+    }
+  }
+  
