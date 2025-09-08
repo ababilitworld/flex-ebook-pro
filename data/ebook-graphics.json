@@ -1,0 +1,361 @@
+[
+  {
+    "id": "0",
+    "title": "Mastering Photopea Graphic Design",
+    "details": "Comprehensive guide to professional graphic design using Photopea",
+    "parent": "0",
+    "children": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "example": "https://www.photopea.com/img/logo512.png"
+  },
+  {
+    "id": "1",
+    "title": "Getting Started",
+    "details": "Introduction to Photopea interface and basic operations",
+    "parent": "0",
+    "children": ["1.1", "1.2", "1.3"]
+  },
+  {
+    "id": "1.1",
+    "title": "Interface Overview",
+    "details": "1. Open Photopea.com in your browser<br>2. Notice the toolbar on left (selection, brush, text tools)<br>3. Layers panel is on the right side<br>4. Properties panel changes based on selected tool<br>5. Top menu contains File, Edit, Image, Layer, Select, Filter options",
+    "parent": "1",
+    "children": [],
+    "example": "https://i.imgur.com/J7ZbYQa.png"
+  },
+  {
+    "id": "1.2",
+    "title": "Basic File Operations",
+    "details": "1. Click File > Open to open an image<br>2. Use File > Save As PSD to save project<br>3. For web: File > Export As > JPG/PNG (PNG for transparency)<br>4. Use Ctrl+O (Win) or Cmd+O (Mac) to quickly open files<br>5. Export settings: Quality 80-90% for JPG, PNG-24 for transparency",
+    "parent": "1",
+    "children": [],
+    "example": "https://i.imgur.com/pQb4Wqk.png"
+  },
+  {
+    "id": "1.3",
+    "title": "Canvas Management",
+    "details": "1. File > New (or Ctrl+N)<br>2. Set dimensions (e.g., 1200x800 pixels for social media)<br>3. Set resolution to 72ppi for web, 300ppi for print<br>4. Use Image > Canvas Size to adjust later<br>5. Alt+Mouse Wheel to zoom, Space+Drag to pan",
+    "parent": "1",
+    "children": [],
+    "example": "https://i.imgur.com/9XzTJdF.png"
+  },
+  {
+    "id": "2",
+    "title": "Essential Editing Techniques",
+    "details": "Core photo manipulation skills",
+    "parent": "0",
+    "children": ["2.1", "2.2", "2.3", "2.4", "2.5"]
+  },
+  {
+    "id": "2.1",
+    "title": "Cropping and Resizing",
+    "details": "1. Select Crop Tool (C)<br>2. Drag edges to select area<br>3. For resizing: Image > Image Size<br>4. Check 'Constrain Proportions' to avoid distortion<br>5. For social media: Use preset ratios (1:1, 4:5, 16:9)",
+    "parent": "2",
+    "children": [],
+    "example": "https://i.imgur.com/8GtVvJK.gif"
+  },
+  {
+    "id": "2.2",
+    "title": "Background Removal",
+    "details": "1. Select Magic Wand (W) or Quick Selection Tool (W)<br>2. Click on background to select<br>3. Press Delete to remove<br>4. For complex edges: Select > Refine Edge (feather 1-2px)<br>5. Save as PNG to preserve transparency",
+    "parent": "2",
+    "children": [],
+    "example": "https://i.imgur.com/5R9fLQ4.gif"
+  },
+  {
+    "id": "2.3",
+    "title": "Color Adjustments",
+    "details": "1. Image > Adjustments > Hue/Saturation (Ctrl+U)<br>2. Drag Hue slider for color change<br>3. For B&W: Image > Adjustments > Black & White<br>4. Use Levels (Ctrl+L) to adjust contrast<br>5. For skin tones: Adjust Reds/Yellows separately",
+    "parent": "2",
+    "children": [],
+    "example": "https://i.imgur.com/VvQwZ7m.gif"
+  },
+  {
+    "id": "2.4",
+    "title": "Object Removal",
+    "details": "1. Select Clone Stamp Tool (S)<br>2. Alt+Click to sample clean area<br>3. Paint over unwanted object<br>4. For best results: Use small brush with 70% hardness<br>5. Use Healing Brush for textures",
+    "parent": "2",
+    "children": [],
+    "example": "https://i.imgur.com/3qY9JjF.gif"
+  },
+  {
+    "id": "2.5",
+    "title": "Transparency Management",
+    "details": "1. Remove background (see 2.2)<br>2. Check transparency in Layers panel (checkerboard pattern)<br>3. Use Eraser Tool (E) for manual cleanup<br>4. For semi-transparency: Adjust layer opacity<br>5. Always export as PNG-24",
+    "parent": "2",
+    "children": [],
+    "example": "https://i.imgur.com/6kQhW3P.png"
+  },
+  {
+    "id": "3",
+    "title": "Text Effects and Typography",
+    "details": "Professional text manipulation",
+    "parent": "0",
+    "children": ["3.1", "3.2", "3.3", "3.4", "3.5"]
+  },
+  {
+    "id": "3.1",
+    "title": "Basic Text Styling",
+    "details": "1. Select Text Tool (T)<br>2. Click canvas and start typing<br>3. Change font in top toolbar<br>4. Adjust size (pt) and color (color box)<br>5. Use Character panel (Window > Character) for advanced options",
+    "parent": "3",
+    "children": [],
+    "example": "https://i.imgur.com/9pQvX3v.png"
+  },
+  {
+    "id": "3.2",
+    "title": "Text Outlines and Strokes",
+    "details": "1. Double-click text layer in Layers panel<br>2. Check 'Stroke' in Layer Style<br>3. Set size (3-5px usually good)<br>4. Position: Outside for clean edges<br>5. Choose contrasting color (e.g., white text with black stroke)",
+    "parent": "3",
+    "children": [],
+    "example": "https://i.imgur.com/4sNkL0G.png"
+  },
+  {
+    "id": "3.3",
+    "title": "Special Text Effects",
+    "details": "NEON:<br>1. Type text<br>2. Layer Style > Outer Glow (bright color)<br>3. Duplicate layer > Gaussian Blur 5px > Screen blend mode<br><br>GOLD FOIL:<br>1. Gradient Overlay (gold-yellow gradient)<br>2. Bevel & Emboss (chisel hard, size 5-8px)<br>3. Pattern Overlay with subtle texture",
+    "parent": "3",
+    "children": [],
+    "example": "https://i.imgur.com/7TkQhHd.png"
+  },
+  {
+    "id": "3.4",
+    "title": "Text Masking",
+    "details": "1. Place image above text layer<br>2. Right-click image layer > Create Clipping Mask<br>3. Adjust image position with Move Tool (V)<br>4. Add stroke to text for better visibility<br>5. Can use any shape, not just text",
+    "parent": "3",
+    "children": [],
+    "example": "https://i.imgur.com/qzVQ2nR.png"
+  },
+  {
+    "id": "3.5",
+    "title": "Text Shadows",
+    "details": "DROP SHADOW:<br>1. Layer Style > Drop Shadow<br>2. Distance: 5-10px, Size: 5-10px<br>3. Opacity: 60-75%<br><br>LONG SHADOW:<br>1. Duplicate text layer<br>2. Fill with dark color<br>3. Edit > Transform > Skew<br>4. Place behind original text<br>5. Repeat for 3D effect",
+    "parent": "3",
+    "children": [],
+    "example": "https://i.imgur.com/9QYvW3L.png"
+  },
+  {
+    "id": "4",
+    "title": "Photo Effects and Filters",
+    "details": "Creative image transformations",
+    "parent": "0",
+    "children": ["4.1", "4.2", "4.3", "4.4", "4.5"]
+  },
+  {
+    "id": "4.1",
+    "title": "Vintage Effects",
+    "details": "1. Image > Adjustments > Photo Filter<br>2. Choose Sepia or Warming Filter (85)<br>3. Add noise: Filter > Noise > Add Noise (2-5%)<br>4. Optional: Create vignette (see 4.4)<br>5. Reduce saturation slightly (-10 to -20)",
+    "parent": "4",
+    "children": [],
+    "example": "https://i.imgur.com/8GQvZ2k.jpg"
+  },
+  {
+    "id": "4.2",
+    "title": "Color Splash",
+    "details": "1. Desaturate image (Ctrl+Shift+U)<br>2. Add Hue/Saturation adjustment layer<br>3. Paint on layer mask with black brush<br>4. Reveal color only where you want it<br>5. Use soft brush (0% hardness) for smooth transitions",
+    "parent": "4",
+    "children": [],
+    "example": "https://i.imgur.com/5QvX9kR.jpg"
+  },
+  {
+    "id": "4.3",
+    "title": "Duotone Effects",
+    "details": "1. Convert to grayscale: Image > Mode > Grayscale<br>2. Image > Adjustments > Gradient Map<br>3. Click gradient to edit colors<br>4. Choose two contrasting colors<br>5. Try blues/oranges or purples/yellows",
+    "parent": "4",
+    "children": [],
+    "example": "https://i.imgur.com/7QvZ2kR.jpg"
+  },
+  {
+    "id": "4.4",
+    "title": "Vignettes",
+    "details": "1. Filter > Lens Correction > Custom tab<br>2. Vignette section: Amount -30 to -60<br>3. Midpoint 30-50<br>4. Alternative: Elliptical Marquee > Feather 150px > Inverse > Levels to darken<br>5. Adjust opacity to taste",
+    "parent": "4",
+    "children": [],
+    "example": "https://i.imgur.com/9QvX3kR.jpg"
+  },
+  {
+    "id": "4.5",
+    "title": "Pixelation",
+    "details": "MOSAIC:<br>1. Filter > Pixelate > Mosaic<br>2. Cell Size 10-30 squares<br><br>HALFTONE:<br>1. Convert to grayscale first<br>2. Filter > Pixelate > Color Halftone<br>3. Max Radius 4-8 pixels<br>4. Channel angles: 15, 45, 0, 30",
+    "parent": "4",
+    "children": [],
+    "example": "https://i.imgur.com/6QvZ9kR.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Composition Techniques",
+    "details": "Advanced image combining methods",
+    "parent": "0",
+    "children": ["5.1", "5.2", "5.3", "5.4"]
+  },
+  {
+    "id": "5.1",
+    "title": "Double Exposure",
+    "details": "1. Remove background from portrait (see 2.2)<br>2. Place landscape image above<br>3. Set blend mode to Screen or Overlay<br>4. Adjust opacity (50-70%)<br>5. Use layer mask to refine where images blend",
+    "parent": "5",
+    "children": [],
+    "example": "https://i.imgur.com/8QvX2kR.jpg"
+  },
+  {
+    "id": "5.2",
+    "title": "Texture Overlays",
+    "details": "1. Find texture image (paper, grunge, etc.)<br>2. Place above your image<br>3. Set blend mode to Multiply or Overlay<br>4. Adjust opacity (30-70%)<br>5. Use layer mask to remove texture from key areas",
+    "parent": "5",
+    "children": [],
+    "example": "https://i.imgur.com/5QvZ3kR.jpg"
+  },
+  {
+    "id": "5.3",
+    "title": "Mirror Effects",
+    "details": "1. Duplicate layer (Ctrl+J)<br>2. Edit > Transform > Flip Horizontal/Vertical<br>3. Position flipped copy adjacent<br>4. Add gradient mask for seamless blend<br>5. Try with portraits for interesting symmetry",
+    "parent": "5",
+    "children": [],
+    "example": "https://i.imgur.com/7QvX9kR.jpg"
+  },
+  {
+    "id": "5.4",
+    "title": "Polaroid Frames",
+    "details": "1. Image > Canvas Size (add 100px white space)<br>2. Use Rectangle Tool (U) for white border<br>3. Add Drop Shadow (see 6.1)<br>4. Optional: Add slight rotation (Edit > Transform > Rotate)<br>5. Write text below image with handwriting font",
+    "parent": "5",
+    "children": [],
+    "example": "https://i.imgur.com/9QvZ2kR.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Lighting and Shadow Effects",
+    "details": "Realistic lighting manipulation",
+    "parent": "0",
+    "children": ["6.1", "6.2", "6.3", "6.4"]
+  },
+  {
+    "id": "6.1",
+    "title": "Drop Shadows",
+    "details": "1. Select layer (text or object)<br>2. Layer > Layer Style > Drop Shadow<br>3. Distance: 5-15px (depends on size)<br>4. Size: 5-15px for softness<br>5. Angle: Match existing light source in image",
+    "parent": "6",
+    "children": [],
+    "example": "https://i.imgur.com/8QvX3kR.png"
+  },
+  {
+    "id": "6.2",
+    "title": "Glow Effects",
+    "details": "1. Duplicate layer you want to glow<br>2. Filter > Blur > Gaussian Blur (5-15px)<br>3. Set blend mode to Screen or Linear Dodge<br>4. Adjust opacity (50-80%)<br>5. Optional: Add Outer Glow in Layer Style",
+    "parent": "6",
+    "children": [],
+    "example": "https://i.imgur.com/7QvZ3kR.png"
+  },
+  {
+    "id": "6.3",
+    "title": "Lens Flare",
+    "details": "1. Create new layer (black fill)<br>2. Filter > Render > Lens Flare<br>3. Choose flare type (50-300mm)<br>4. Set blend mode to Screen<br>5. Position flare where light would naturally hit",
+    "parent": "6",
+    "children": [],
+    "example": "https://i.imgur.com/6QvX9kR.png"
+  },
+  {
+    "id": "6.4",
+    "title": "Bokeh",
+    "details": "1. New layer<br>2. Use Brush Tool (B) with soft round brush<br>3. Paint dots in varying sizes (3-20px)<br>4. Apply Gaussian Blur (2-5px)<br>5. Set blend mode to Screen or Overlay<br>6. Adjust opacity (50-70%)",
+    "parent": "6",
+    "children": [],
+    "example": "https://i.imgur.com/5QvZ9kR.png"
+  },
+  {
+    "id": "7",
+    "title": "Special Effects",
+    "details": "Creative visual enhancements",
+    "parent": "0",
+    "children": ["7.1", "7.2", "7.3", "7.4"]
+  },
+  {
+    "id": "7.1",
+    "title": "Smoke Effects",
+    "details": "1. New layer<br>2. Use Smoke Brush (download if needed)<br>3. Paint with white on black background<br>4. Filter > Blur > Gaussian Blur (3-8px)<br>5. Set blend mode to Screen<br>6. Adjust opacity (50-80%)",
+    "parent": "7",
+    "children": [],
+    "example": "https://i.imgur.com/9QvX2kR.png"
+  },
+  {
+    "id": "7.2",
+    "title": "Water Reflections",
+    "details": "1. Duplicate layer<br>2. Edit > Transform > Flip Vertical<br>3. Position below original<br>4. Add layer mask > Gradient (black to white)<br>5. Filter > Distort > Ripple (Small, 10-20%)<br>6. Reduce opacity (50-70%)",
+    "parent": "7",
+    "children": [],
+    "example": "https://i.imgur.com/8QvZ9kR.png"
+  },
+  {
+    "id": "7.3",
+    "title": "Rain Effects",
+    "details": "1. New layer (fill with black)<br>2. Filter > Noise > Add Noise (100%, Monochromatic)<br>3. Filter > Blur > Motion Blur (Angle 60-75°, Distance 15-30px)<br>4. Set blend mode to Screen<br>5. Adjust opacity (50-70%)<br>6. Add Gaussian Blur (1-2px) for softness",
+    "parent": "7",
+    "children": [],
+    "example": "https://i.imgur.com/7QvX2kR.png"
+  },
+  {
+    "id": "7.4",
+    "title": "Soft Focus",
+    "details": "1. Duplicate layer<br>2. Filter > Blur > Gaussian Blur (10-20px)<br>3. Set opacity to 30-50%<br>4. Add layer mask<br>5. Paint with black brush on mask to reveal sharp areas (eyes, lips)<br>6. Optional: Add slight vignette",
+    "parent": "7",
+    "children": [],
+    "example": "https://i.imgur.com/6QvZ3kR.png"
+  },
+  {
+    "id": "8",
+    "title": "Branding and Social Media",
+    "details": "Design for business applications",
+    "parent": "0",
+    "children": ["8.1", "8.2", "8.3"]
+  },
+  {
+    "id": "8.1",
+    "title": "Logo Design",
+    "details": "1. Start with text or shape<br>2. Add Layer Styles (Stroke, Bevel, Gradient)<br>3. Keep it simple and scalable<br>4. Test in black & white first<br>5. Finalize in vector if possible<br>6. Export as PNG-24 with transparency",
+    "parent": "8",
+    "children": [],
+    "example": "https://i.imgur.com/5QvX3kR.png"
+  },
+  {
+    "id": "8.2",
+    "title": "Watermarking",
+    "details": "1. Create transparent PNG logo (see 8.1)<br>2. Open image to watermark<br>3. Place logo in corner<br>4. Set opacity 20-40%<br>5. Optional: Add slight drop shadow for visibility<br>6. Save as copy to preserve original",
+    "parent": "8",
+    "children": [],
+    "example": "https://i.imgur.com/9QvZ9kR.png"
+  },
+  {
+    "id": "8.3",
+    "title": "Social Media Templates",
+    "details": "INSTAGRAM POST:<br>1. Canvas size: 1080x1080px<br>2. Add margins (safe zone)<br>3. Create consistent color scheme<br><br>STORY:<br>1. 1080x1920px<br>2. Place key elements in center<br>3. Use bold, readable text<br>4. Export as JPG (Quality 80+)",
+    "parent": "8",
+    "children": [],
+    "example": "https://i.imgur.com/8QvX9kR.png"
+  },
+  {
+    "id": "9",
+    "title": "Workflow Optimization",
+    "details": "Professional techniques and shortcuts",
+    "parent": "0",
+    "children": ["9.1", "9.2", "9.3"]
+  },
+  {
+    "id": "9.1",
+    "title": "Layer Management",
+    "details": "1. Name all layers clearly<br>2. Use folders (Layer Groups) for organization<br>3. Color-code layers (right-click layer > Color)<br>4. Use Ctrl+Alt+Click to select layer content<br>5. Alt+Click between layers to create clipping masks",
+    "parent": "9",
+    "children": [],
+    "example": "https://i.imgur.com/7QvZ9kR.png"
+  },
+  {
+    "id": "9.2",
+    "title": "Batch Processing",
+    "details": "1. File > Scripts > Image Processor<br>2. Select source folder<br>3. Set file type (JPG/PNG)<br>4. Choose quality/resize options<br>5. Run<br>Alternative: Record Actions for repetitive tasks",
+    "parent": "9",
+    "children": [],
+    "example": "https://i.imgur.com/6QvX2kR.png"
+  },
+  {
+    "id": "9.3",
+    "title": "Export Optimization",
+    "details": "JPG:<br>1. Quality 80-90%<br>2. Progressive for web<br>3. Baseline Optimized<br><br>PNG:<br>1. PNG-8 for simple graphics (256 colors)<br>2. PNG-24 for transparency<br>3. Use 'Export As' for size preview<br><br>Always check file size before uploading",
+    "parent": "9",
+    "children": [],
+    "example": "https://i.imgur.com/5QvZ2kR.png"
+  }
+]

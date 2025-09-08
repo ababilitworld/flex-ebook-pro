@@ -1,361 +1,374 @@
 [
   {
     "id": "0",
-    "title": "Mastering Photopea Graphic Design",
-    "details": "Comprehensive guide to professional graphic design using Photopea",
+    "title": "Mastering CSS3: From Zero to Hero",
+    "details": "Complete guide to modern CSS, from fundamentals to advanced layout techniques and best practices.",
     "parent": "0",
     "children": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-    "example": "https://www.photopea.com/img/logo512.png"
+    "example": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png"
   },
   {
     "id": "1",
-    "title": "Getting Started",
-    "details": "Introduction to Photopea interface and basic operations",
+    "title": "CSS Foundations",
+    "details": "Understanding the core syntax and mechanics of how CSS works.",
     "parent": "0",
-    "children": ["1.1", "1.2", "1.3"]
+    "children": ["1.1", "1.2", "1.3", "1.4", "1.5"]
   },
   {
     "id": "1.1",
-    "title": "Interface Overview",
-    "details": "1. Open Photopea.com in your browser<br>2. Notice the toolbar on left (selection, brush, text tools)<br>3. Layers panel is on the right side<br>4. Properties panel changes based on selected tool<br>5. Top menu contains File, Edit, Image, Layer, Select, Filter options",
+    "title": "Syntax & Selectors",
+    "details": "CSS rules consist of selectors that target HTML elements and declarations that define their styling.<div>1. Structure: selector { property: value; }<br>2. Basic Selectors: element (p), class (.class), id (#id)<br>3. Grouping: h1, h2, p {}<br>4. The Universal Selector: * {}</div> <p>To style all paragraphs with red text:</p><div class='code'>p { color: red; }</div><p>To target a specific element with class 'highlight':</p><div class='code'>.highlight { background-color: yellow; }</div>",
     "parent": "1",
     "children": [],
-    "example": "https://i.imgur.com/J7ZbYQa.png"
+    "example": "https://mdn.mozillademos.org/files/16483/css%20syntax%20-%20selector.png"
   },
   {
     "id": "1.2",
-    "title": "Basic File Operations",
-    "details": "1. Click File > Open to open an image<br>2. Use File > Save As PSD to save project<br>3. For web: File > Export As > JPG/PNG (PNG for transparency)<br>4. Use Ctrl+O (Win) or Cmd+O (Mac) to quickly open files<br>5. Export settings: Quality 80-90% for JPG, PNG-24 for transparency",
+    "title": "The Cascade, Specificity, and Inheritance",
+    "details": "CSS follows a cascade system where multiple rules can apply to the same element, with specificity determining which rule wins. <div> 1. Cascade: Order of rules matters.<br>2. Specificity: How browsers decide which rule applies. (Inline > ID > Class > Element)<br>3. Inheritance: Some properties (e.g., color, font) inherit from parent elements.</div> <p>Example of specificity hierarchy:</p><div class='code'>#main { color: blue; } /* ID selector - highest specificity */<br>.container { color: green; } /* Class selector - medium specificity */<br>div { color: red; } /* Element selector - lowest specificity */</div>",
     "parent": "1",
     "children": [],
-    "example": "https://i.imgur.com/pQb4Wqk.png"
+    "example": "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity/specificity-calculation.png"
   },
   {
     "id": "1.3",
-    "title": "Canvas Management",
-    "details": "1. File > New (or Ctrl+N)<br>2. Set dimensions (e.g., 1200x800 pixels for social media)<br>3. Set resolution to 72ppi for web, 300ppi for print<br>4. Use Image > Canvas Size to adjust later<br>5. Alt+Mouse Wheel to zoom, Space+Drag to pan",
+    "title": "The Box Model",
+    "details": "Every element is represented as a rectangular box with content, padding, border, and margin areas. <div> 1. Core Concept: content + padding + border + margin = total size.<br>2. box-sizing: border-box; (includes padding & border in width/height).<br>3. box-sizing: content-box; (default).</div> <p>Example of box model calculation:</p><div class='code'>div {<br>  width: 300px;<br>  padding: 20px;<br>  border: 5px solid black;<br>  margin: 10px;<br>  box-sizing: border-box; /* Includes padding and border in width */<br>}</div>",
     "parent": "1",
     "children": [],
-    "example": "https://i.imgur.com/9XzTJdF.png"
+    "example": "https://mdn.mozillademos.org/files/16558/box-model.png"
+  },
+  {
+    "id": "1.4",
+    "title": "Units of Measurement",
+    "details": "CSS supports various units for specifying lengths and sizes, each with different use cases.<div>1. Absolute: px (pixels), pt (points).<br>2. Relative: % (percentage), em (relative to parent font-size), rem (relative to root html font-size), vw/vh (viewport width/height).</div> <p>Examples of different units:</p><div class='code'>.fixed { width: 300px; } /* Fixed pixels */<br>.relative { width: 50%; } /* Percentage of parent */<br>.font-relative { font-size: 1.5em; } /* Relative to parent font size */<br>.root-relative { font-size: 1.5rem; } /* Relative to root font size */<br>.viewport { width: 50vw; height: 50vh; } /* Relative to viewport size */</div>",
+    "parent": "1",
+    "children": []
+  },
+  {
+    "id": "1.5",
+    "title": "Basic Typography",
+    "details": "CSS provides extensive control over text appearance and formatting. <div>1. font-family: Define typefaces.<br>2. font-size: Control text size.<br>3. font-weight: Control boldness (100-900, normal, bold).<br>4. color: Set text color.</div><p>Example of typography styling:</p><div class='code'>body {<br>  font-family: 'Arial', sans-serif;<br>  font-size: 16px;<br>  line-height: 1.5;<br>  color: #333;<br>}<br><br>h1 {<br>  font-size: 2rem;<br>  font-weight: bold;<br>  text-align: center;<br>}</div>",
+    "parent": "1",
+    "children": [],
+    "example": "https://mdn.mozillademos.org/files/16042/typography.png"
   },
   {
     "id": "2",
-    "title": "Essential Editing Techniques",
-    "details": "Core photo manipulation skills",
+    "title": "Layout Fundamentals",
+    "details": "Traditional CSS layout techniques that are still essential for many use cases.",
     "parent": "0",
-    "children": ["2.1", "2.2", "2.3", "2.4", "2.5"]
+    "children": ["2.1", "2.2", "2.3", "2.4"]
   },
   {
     "id": "2.1",
-    "title": "Cropping and Resizing",
-    "details": "1. Select Crop Tool (C)<br>2. Drag edges to select area<br>3. For resizing: Image > Image Size<br>4. Check 'Constrain Proportions' to avoid distortion<br>5. For social media: Use preset ratios (1:1, 4:5, 16:9)",
+    "title": "Display Property",
+    "details": "The display property determines how an element is rendered in the document flow. <div>1. display: block; (e.g., div, p - takes full width).<br>2. display: inline; (e.g., span - flows like text).<br>3. display: inline-block; (inline flow, but accepts box model properties).<br>4. display: none; (hides element)</div><p>Examples of different display values:</p><div class='code'>.block { display: block; } /* Stack vertically, full width */<br>.inline { display: inline; } /* Flow horizontally like text */<br>.inline-block { display: inline-block; } /* Flow horizontally but accept box properties */<br>.hidden { display: none; } /* Completely hidden */</div>",
     "parent": "2",
-    "children": [],
-    "example": "https://i.imgur.com/8GtVvJK.gif"
+    "children": []
   },
   {
     "id": "2.2",
-    "title": "Background Removal",
-    "details": "1. Select Magic Wand (W) or Quick Selection Tool (W)<br>2. Click on background to select<br>3. Press Delete to remove<br>4. For complex edges: Select > Refine Edge (feather 1-2px)<br>5. Save as PNG to preserve transparency",
+    "title": "Positioning",
+    "details": "CSS positioning allows you to control the placement of elements in relation to their normal document flow. <div>1. position: static; (default, normal flow).<br>2. position: relative; (offset relative to itself).<br>3. position: absolute; (offset relative to nearest positioned ancestor).<br>4. position: fixed; (offset relative to viewport).<br>5. position: sticky; (toggles between relative and fixed).</div> <p>Examples of different positioning:</p><div class='code'>.relative {<br>  position: relative;<br>  top: 10px;<br>  left: 20px;<br>}<br><br>.absolute {<br>  position: absolute;<br>  top: 0;<br>  right: 0;<br>}<br><br>.fixed {<br>  position: fixed;<br>  bottom: 20px;<br>  right: 20px;<br>}</div>",
     "parent": "2",
     "children": [],
-    "example": "https://i.imgur.com/5R9fLQ4.gif"
+    "example": "https://mdn.mozillademos.org/files/15614/positioning.png"
   },
   {
     "id": "2.3",
-    "title": "Color Adjustments",
-    "details": "1. Image > Adjustments > Hue/Saturation (Ctrl+U)<br>2. Drag Hue slider for color change<br>3. For B&W: Image > Adjustments > Black & White<br>4. Use Levels (Ctrl+L) to adjust contrast<br>5. For skin tones: Adjust Reds/Yellows separately",
+    "title": "Floats & Clear",
+    "details": "Floats were originally for text wrapping around images but became a layout tool before Flexbox/Grid. <div>1. float: left/right; (pushes element to side, content wraps around).<br>2. clear: both/left/right; (ensures element is below floated elements).</div> <p>Example of float layout:</p><div class='code'>.sidebar {<br>  float: left;<br>  width: 30%;<br>}<br><br>.content {<br>  float: right;<br>  width: 65%;<br>}<br><br>.clearfix::after {<br>  content: '';<br>  display: table;<br>  clear: both;<br>}</div>",
     "parent": "2",
     "children": [],
-    "example": "https://i.imgur.com/VvQwZ7m.gif"
+    "example": "https://mdn.mozillademos.org/files/17574/floats.png"
   },
   {
     "id": "2.4",
-    "title": "Object Removal",
-    "details": "1. Select Clone Stamp Tool (S)<br>2. Alt+Click to sample clean area<br>3. Paint over unwanted object<br>4. For best results: Use small brush with 70% hardness<br>5. Use Healing Brush for textures",
+    "title": "Centering Techniques",
+    "details": "Centering elements in CSS has historically been challenging with various techniques for different scenarios.<div>1. Text: text-align: center;<br>2. Block: margin: 0 auto;<br>3. Modern: Flexbox or Grid (see sections 3 & 4).</div> <p>Examples of centering methods:</p><div class='code'>/* Horizontal centering for inline elements */<br>.container { text-align: center; }<br><br>/* Horizontal centering for block elements */<br>.box { margin: 0 auto; }<br><br>/* Vertical centering with table display */<br>.parent { display: table; }<br>.child { display: table-cell; vertical-align: middle; }</div>",
     "parent": "2",
-    "children": [],
-    "example": "https://i.imgur.com/3qY9JjF.gif"
-  },
-  {
-    "id": "2.5",
-    "title": "Transparency Management",
-    "details": "1. Remove background (see 2.2)<br>2. Check transparency in Layers panel (checkerboard pattern)<br>3. Use Eraser Tool (E) for manual cleanup<br>4. For semi-transparency: Adjust layer opacity<br>5. Always export as PNG-24",
-    "parent": "2",
-    "children": [],
-    "example": "https://i.imgur.com/6kQhW3P.png"
+    "children": []
   },
   {
     "id": "3",
-    "title": "Text Effects and Typography",
-    "details": "Professional text manipulation",
+    "title": "Flexbox",
+    "details": "Modern one-dimensional layout model for arranging items in rows or columns with powerful alignment capabilities.",
     "parent": "0",
     "children": ["3.1", "3.2", "3.3", "3.4", "3.5"]
   },
   {
     "id": "3.1",
-    "title": "Basic Text Styling",
-    "details": "1. Select Text Tool (T)<br>2. Click canvas and start typing<br>3. Change font in top toolbar<br>4. Adjust size (pt) and color (color box)<br>5. Use Character panel (Window > Character) for advanced options",
+    "title": "Flex Container Basics",
+    "details": "A flex container enables a flex context for all its direct children (flex items).<div>1. display: flex; (activates flexbox).<br>2. flex-direction: row / column (main axis).<br>3. flex-wrap: wrap / nowrap (single or multiple lines).<br>4. justify-content: (align on main axis: flex-start, center, space-between, space-around).<br>5. align-items: (align on cross axis: stretch, flex-start, center, baseline).</div> <p>Example of flex container properties:</p><div class='code'>.container {<br>  display: flex;<br>  flex-direction: row; /* or column */<br>  justify-content: space-between; /* main axis alignment */<br>  align-items: center; /* cross axis alignment */<br>  flex-wrap: wrap; /* allow wrapping */<br>}</div>",
     "parent": "3",
     "children": [],
-    "example": "https://i.imgur.com/9pQvX3v.png"
+    "example": "https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg"
   },
   {
     "id": "3.2",
-    "title": "Text Outlines and Strokes",
-    "details": "1. Double-click text layer in Layers panel<br>2. Check 'Stroke' in Layer Style<br>3. Set size (3-5px usually good)<br>4. Position: Outside for clean edges<br>5. Choose contrasting color (e.g., white text with black stroke)",
+    "title": "Aligning Content & Items",
+    "details": "Flexbox provides precise control over alignment along both the main and cross axes.<div>1. align-content: (aligns flex lines: space-between, center, stretch). Use when there are multiple lines.<br>2. align-items: (aligns items on the cross axis for a single line).</div> <p>Examples of alignment properties:</p><div class='code'>.container {<br>  align-items: center; /* Align items on cross axis */<br>  align-content: space-between; /* Align lines when wrapping */<br>  justify-content: center; /* Distribute along main axis */<br>}</div>",
     "parent": "3",
     "children": [],
-    "example": "https://i.imgur.com/4sNkL0G.png"
+    "example": "https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg"
   },
   {
     "id": "3.3",
-    "title": "Special Text Effects",
-    "details": "NEON:<br>1. Type text<br>2. Layer Style > Outer Glow (bright color)<br>3. Duplicate layer > Gaussian Blur 5px > Screen blend mode<br><br>GOLD FOIL:<br>1. Gradient Overlay (gold-yellow gradient)<br>2. Bevel & Emboss (chisel hard, size 5-8px)<br>3. Pattern Overlay with subtle texture",
+    "title": "Flex Item Properties",
+    "details": "Flex items can be individually controlled with properties that affect their sizing and alignment.<div>1. flex-grow: (ability to grow if extra space is available).<br>2. flex-shrink: (ability to shrink if necessary).<br>3. flex-basis: (default size of an item before remaining space is distributed).<br>4. flex: shorthand (grow shrink basis).<br>5. align-self: (overrides align-items for individual item).</div> <p>Examples of flex item properties:</p><div class='code'>.item {<br>  flex: 1; /* grow: 1, shrink: 1, basis: 0% */<br>}<br><br>.featured {<br>  flex: 2; /* Takes twice the space */<br>}<br><br>.special {<br>  align-self: center; /* Override container alignment */<br>}</div>",
     "parent": "3",
     "children": [],
-    "example": "https://i.imgur.com/7TkQhHd.png"
+    "example": "https://css-tricks.com/wp-content/uploads/2018/10/flex-items.svg"
   },
   {
     "id": "3.4",
-    "title": "Text Masking",
-    "details": "1. Place image above text layer<br>2. Right-click image layer > Create Clipping Mask<br>3. Adjust image position with Move Tool (V)<br>4. Add stroke to text for better visibility<br>5. Can use any shape, not just text",
+    "title": "Practical Flexbox Examples",
+    "details": "Flexbox excels at creating common UI patterns that were previously complex to implement. <div>1. Navigation bars.<br>2. Card layouts with equal heights.<br>3. Vertical and horizontal centering.<br>4. Sticky footers.</div><p>Example of navigation bar:</p><div class='code'>.nav {<br>  display: flex;<br>  justify-content: space-between;<br>  align-items: center;<br>}<br><br>.nav-item {<br>  padding: 10px 15px;<br>}</div>",
     "parent": "3",
     "children": [],
-    "example": "https://i.imgur.com/qzVQ2nR.png"
+    "example": "https://mdn.mozillademos.org/files/16046/flexbox-example1.png"
   },
   {
     "id": "3.5",
-    "title": "Text Shadows",
-    "details": "DROP SHADOW:<br>1. Layer Style > Drop Shadow<br>2. Distance: 5-10px, Size: 5-10px<br>3. Opacity: 60-75%<br><br>LONG SHADOW:<br>1. Duplicate text layer<br>2. Fill with dark color<br>3. Edit > Transform > Skew<br>4. Place behind original text<br>5. Repeat for 3D effect",
+    "title": "Common Flexbox Pitfalls",
+    "details": "While powerful, Flexbox has some behaviors that can be surprising to those new to the technology.<div>1. Forgetting to set a width/flex-basis on items.<br>2. Margin collapse doesn't happen in flexbox.<br>3. Using fixed widths that break the flex model.</div> <p>Example of flex item minimum size issue:</p><div class='code'>.item {<br>  flex: 1;<br>  min-width: 0; /* Allow item to shrink below content size */<br>}</div>",
     "parent": "3",
-    "children": [],
-    "example": "https://i.imgur.com/9QYvW3L.png"
+    "children": []
   },
   {
     "id": "4",
-    "title": "Photo Effects and Filters",
-    "details": "Creative image transformations",
+    "title": "CSS Grid",
+    "details": "Powerful two-dimensional layout system for designing complex web layouts with precise control over rows and columns.",
     "parent": "0",
     "children": ["4.1", "4.2", "4.3", "4.4", "4.5"]
   },
   {
     "id": "4.1",
-    "title": "Vintage Effects",
-    "details": "1. Image > Adjustments > Photo Filter<br>2. Choose Sepia or Warming Filter (85)<br>3. Add noise: Filter > Noise > Add Noise (2-5%)<br>4. Optional: Create vignette (see 4.4)<br>5. Reduce saturation slightly (-10 to -20)",
+    "title": "Grid Container Basics",
+    "details": "A grid container establishes a grid formatting context for its direct children.<div>1. display: grid; or display: inline-grid;<br>2. grid-template-columns: Define column tracks (e.g., 1fr 1fr 1fr, 200px auto, repeat(3, 1fr)).<br>3. grid-template-rows: Define row tracks.<br>4. gap: (grid-gap) - Sets spacing between grid items.</div> <p>Example of grid container setup:</p><div class='code'>.container {<br>  display: grid;<br>  grid-template-columns: 200px 1fr 1fr;<br>  grid-template-rows: 100px auto;<br>  gap: 20px;<br>}</div>",
     "parent": "4",
     "children": [],
-    "example": "https://i.imgur.com/8GQvZ2k.jpg"
+    "example": "https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-columns-rows-01.svg"
   },
   {
     "id": "4.2",
-    "title": "Color Splash",
-    "details": "1. Desaturate image (Ctrl+Shift+U)<br>2. Add Hue/Saturation adjustment layer<br>3. Paint on layer mask with black brush<br>4. Reveal color only where you want it<br>5. Use soft brush (0% hardness) for smooth transitions",
+    "title": "Grid Template Areas",
+    "details": "A visual way to define your grid layout by naming areas of the grid.<div>1. grid-template-areas: Visual way to define layout.<br>2. Assign names to areas: \"header header header\" \"sidebar main main\".<br>3. Use grid-area on items to place them.</div> <p>Example using grid template areas:</p><div class='code'>.container {<br>  grid-template-areas: <br>    'header header header'<br>    'sidebar main main'<br>    'footer footer footer';<br>}<br><br>.header { grid-area: header; }<br>.sidebar { grid-area: sidebar; }<br>.main { grid-area: main; }<br>.footer { grid-area: footer; }</div>",
     "parent": "4",
     "children": [],
-    "example": "https://i.imgur.com/5QvX9kR.jpg"
+    "example": "https://mdn.mozillademos.org/files/16053/grid-template-areas.png"
   },
   {
     "id": "4.3",
-    "title": "Duotone Effects",
-    "details": "1. Convert to grayscale: Image > Mode > Grayscale<br>2. Image > Adjustments > Gradient Map<br>3. Click gradient to edit colors<br>4. Choose two contrasting colors<br>5. Try blues/oranges or purples/yellows",
+    "title": "Placing Grid Items",
+    "details": "Grid items can be precisely placed using line numbers, named lines, or span keywords.<div>1. grid-column: start / end; (e.g., 1 / 3 or span 2).<br>2. grid-row: start / end;<br>3. Use grid-line numbers or named lines.</div> <p>Examples of grid item placement:</p><div class='code'>.item {<br>  grid-column: 1 / 3; /* From line 1 to line 3 */<br>  grid-row: 2 / 4; /* From line 2 to line 4 */<br>}<br><br>.span-item {<br>  grid-column: span 2; /* Span 2 columns */<br>}</div>",
     "parent": "4",
     "children": [],
-    "example": "https://i.imgur.com/7QvZ2kR.jpg"
+    "example": "https://css-tricks.com/wp-content/uploads/2018/11/template-columns-rows-02.svg"
   },
   {
     "id": "4.4",
-    "title": "Vignettes",
-    "details": "1. Filter > Lens Correction > Custom tab<br>2. Vignette section: Amount -30 to -60<br>3. Midpoint 30-50<br>4. Alternative: Elliptical Marquee > Feather 150px > Inverse > Levels to darken<br>5. Adjust opacity to taste",
+    "title": "Alignment in Grid",
+    "details": "Grid provides comprehensive alignment controls for both grid items and the entire grid container.<div>1. justify-items / justify-content: Align items on the row (inline) axis.<br>2. align-items / align-content: Align items on the column (block) axis.<br>3. place-items: shorthand (align justify).</div> <p>Examples of grid alignment:</p><div class='code'>.container {<br>  justify-items: center; /* Align items on row axis */<br>  align-items: center; /* Align items on column axis */<br>  justify-content: space-between; /* Align grid on row axis */<br>  align-content: space-around; /* Align grid on column axis */<br>}</div>",
     "parent": "4",
     "children": [],
-    "example": "https://i.imgur.com/9QvX3kR.jpg"
+    "example": "https://css-tricks.com/wp-content/uploads/2018/11/align-justify-content-01.svg"
   },
   {
     "id": "4.5",
-    "title": "Pixelation",
-    "details": "MOSAIC:<br>1. Filter > Pixelate > Mosaic<br>2. Cell Size 10-30 squares<br><br>HALFTONE:<br>1. Convert to grayscale first<br>2. Filter > Pixelate > Color Halftone<br>3. Max Radius 4-8 pixels<br>4. Channel angles: 15, 45, 0, 30",
+    "title": "Practical Grid Examples",
+    "details": "CSS Grid simplifies many complex layout patterns that previously required hacky solutions.<div>1. Holy Grail Layout (header, footer, sidebar, main).<br>2. Magazine-style/image gallery layouts.<br>3. Overlapping content.</div> <p>Example of holy grail layout:</p><div class='code'>.container {<br>  display: grid;<br>  grid-template: <br>    'header header header' 80px<br>    'nav content ads' 1fr<br>    'footer footer footer' 60px / 200px 1fr 200px;<br>}</div>",
     "parent": "4",
     "children": [],
-    "example": "https://i.imgur.com/6QvZ9kR.jpg"
+    "example": "https://mdn.mozillademos.org/files/16059/grid-layout.png"
   },
   {
     "id": "5",
-    "title": "Composition Techniques",
-    "details": "Advanced image combining methods",
+    "title": "Responsive Design",
+    "details": "Techniques to create websites that work well on a variety of devices and screen sizes.",
     "parent": "0",
     "children": ["5.1", "5.2", "5.3", "5.4"]
   },
   {
     "id": "5.1",
-    "title": "Double Exposure",
-    "details": "1. Remove background from portrait (see 2.2)<br>2. Place landscape image above<br>3. Set blend mode to Screen or Overlay<br>4. Adjust opacity (50-70%)<br>5. Use layer mask to refine where images blend",
+    "title": "Viewport Meta Tag",
+    "details": "Essential HTML tag that controls how mobile browsers render page dimensions and scaling.<div>1. Essential for mobile: <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">.<br>2. Tells the browser to match the screen's width.</div> <p>Basic viewport setup:</p><div class='code'>&lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</div>",
     "parent": "5",
-    "children": [],
-    "example": "https://i.imgur.com/8QvX2kR.jpg"
+    "children": []
   },
   {
     "id": "5.2",
-    "title": "Texture Overlays",
-    "details": "1. Find texture image (paper, grunge, etc.)<br>2. Place above your image<br>3. Set blend mode to Multiply or Overlay<br>4. Adjust opacity (30-70%)<br>5. Use layer mask to remove texture from key areas",
+    "title": "Media Queries",
+    "details": "CSS feature that applies different styles based on device characteristics, most commonly viewport width.<div>1. @media (max-width: 768px) { ... } (styles for screens smaller than 768px).<br>2. @media (min-width: 769px) { ... } (styles for larger screens).<br>3. Use breakpoints based on content, not specific devices.</div> <p>Example media queries:</p><div class='code'>@media (max-width: 768px) {<br>  .sidebar { display: none; }<br>}<br><br>@media (min-width: 1200px) {<br>  .container { max-width: 1140px; }<br>}</div>",
     "parent": "5",
     "children": [],
-    "example": "https://i.imgur.com/5QvZ3kR.jpg"
+    "example": "https://mdn.mozillademos.org/files/16714/media-query.png"
   },
   {
     "id": "5.3",
-    "title": "Mirror Effects",
-    "details": "1. Duplicate layer (Ctrl+J)<br>2. Edit > Transform > Flip Horizontal/Vertical<br>3. Position flipped copy adjacent<br>4. Add gradient mask for seamless blend<br>5. Try with portraits for interesting symmetry",
+    "title": "Responsive Units & Strategies",
+    "details": "Using relative units and flexible layouts that adapt to different screen sizes.<div>1. Use relative units (%, rem, vw/vh) over fixed px.<br>2. Flexbox and Grid are inherently responsive.<br>3. Mobile-First: Write base styles for mobile, then use min-width media queries for larger screens.</div> <p>Example of responsive units:</p><div class='code'>.responsive {<br>  width: 90%; /* Percentage of parent */<br>  font-size: 1.2rem; /* Relative to root font size */<br>  padding: 2vw; /* Relative to viewport width */<br>  margin: 0 auto; /* Auto margins for centering */<br>}</div>",
     "parent": "5",
-    "children": [],
-    "example": "https://i.imgur.com/7QvX9kR.jpg"
+    "children": []
   },
   {
     "id": "5.4",
-    "title": "Polaroid Frames",
-    "details": "1. Image > Canvas Size (add 100px white space)<br>2. Use Rectangle Tool (U) for white border<br>3. Add Drop Shadow (see 6.1)<br>4. Optional: Add slight rotation (Edit > Transform > Rotate)<br>5. Write text below image with handwriting font",
+    "title": "Responsive Images",
+    "details": "Techniques to serve appropriately sized images based on device capabilities and screen size.<div>1. img { max-width: 100%; height: auto; } (prevents images from overflowing container).<br>2. HTML srcset & sizes attributes for serving different image files.<br>3. picture element for art direction.</div> <p>Example of responsive image techniques:</p><div class='code'>img {<br>  max-width: 100%;<br>  height: auto;<br>}<br><br>&lt;img srcset=\"small.jpg 500w, large.jpg 1000w\"<br>     sizes=\"(max-width: 600px) 500px, 1000px\"<br>     src=\"fallback.jpg\" alt=\"Description\"&gt;</div>",
     "parent": "5",
-    "children": [],
-    "example": "https://i.imgur.com/9QvZ2kR.jpg"
+    "children": []
   },
   {
     "id": "6",
-    "title": "Lighting and Shadow Effects",
-    "details": "Realistic lighting manipulation",
+    "title": "Styling & Effects",
+    "details": "Advanced CSS properties for enhancing visual design with shadows, transitions, and transformations.",
     "parent": "0",
-    "children": ["6.1", "6.2", "6.3", "6.4"]
+    "children": ["6.1", "6.2", "6.3", "6.4", "6.5"]
   },
   {
     "id": "6.1",
-    "title": "Drop Shadows",
-    "details": "1. Select layer (text or object)<br>2. Layer > Layer Style > Drop Shadow<br>3. Distance: 5-15px (depends on size)<br>4. Size: 5-15px for softness<br>5. Angle: Match existing light source in image",
+    "title": "Advanced Backgrounds",
+    "details": "CSS provides extensive control over background images, colors, and their positioning.<div>1. background-size: cover / contain;<br>2. background-position: center;<br>3. Multiple backgrounds: background: url(image1.png), url(image2.png);<br>4. Linear & Radial Gradients: background: linear-gradient(to right, red, blue);</div> <p>Example of advanced background techniques:</p><div class='code'>.hero {<br>  background: <br>    linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)),<br>    url('hero.jpg') center/cover no-repeat;<br>}</div>",
     "parent": "6",
     "children": [],
-    "example": "https://i.imgur.com/8QvX3kR.png"
+    "example": "https://mdn.mozillademos.org/files/5707/background.png"
   },
   {
     "id": "6.2",
-    "title": "Glow Effects",
-    "details": "1. Duplicate layer you want to glow<br>2. Filter > Blur > Gaussian Blur (5-15px)<br>3. Set blend mode to Screen or Linear Dodge<br>4. Adjust opacity (50-80%)<br>5. Optional: Add Outer Glow in Layer Style",
+    "title": "Borders & Border-Radius",
+    "details": "Beyond basic borders, CSS offers creative options for element edges and corners.<div>1. border: 1px solid #ccc; (width style color).<br>2. border-radius: 10px; (rounded corners).<br>3. border-radius: 50%; (creates a circle).</div> <p>Examples of border styling:</p><div class='code'>.circle { border-radius: 50%; }<br><br>.button {<br>  border: 2px solid #3498db;<br>  border-radius: 8px;<br>}<br><br>.custom-corner {<br>  border-top-left-radius: 10px;<br>  border-bottom-right-radius: 15px;<br>}</div>",
     "parent": "6",
-    "children": [],
-    "example": "https://i.imgur.com/7QvZ3kR.png"
+    "children": []
   },
   {
     "id": "6.3",
-    "title": "Lens Flare",
-    "details": "1. Create new layer (black fill)<br>2. Filter > Render > Lens Flare<br>3. Choose flare type (50-300mm)<br>4. Set blend mode to Screen<br>5. Position flare where light would naturally hit",
+    "title": "Shadows (Box & Text)",
+    "details": "Shadows add depth and dimension to elements and text, creating visual hierarchy.<div>1. box-shadow: 5px 5px 15px rgba(0,0,0,0.3); (offset-x | offset-y | blur-radius | color).<br>2. text-shadow: 2px 2px 4px #000; (similar syntax).<br>3. Inset shadows for depressed effects.</div> <p>Examples of shadow effects:</p><div class='code'>.card {<br>  box-shadow: <br>    0 4px 8px rgba(0,0,0,0.1),<br>    0 2px 4px rgba(0,0,0,0.08);<br>}<br><br>h1 {<br>  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);<br>}</div>",
     "parent": "6",
     "children": [],
-    "example": "https://i.imgur.com/6QvX9kR.png"
+    "example": "https://mdn.mozillademos.org/files/16067/box-shadow.png"
   },
   {
     "id": "6.4",
-    "title": "Bokeh",
-    "details": "1. New layer<br>2. Use Brush Tool (B) with soft round brush<br>3. Paint dots in varying sizes (3-20px)<br>4. Apply Gaussian Blur (2-5px)<br>5. Set blend mode to Screen or Overlay<br>6. Adjust opacity (50-70%)",
+    "title": "Transitions",
+    "details": "Smoothly animate changes between property values over a specified duration. <div>1. transition: property duration timing-function delay;<br>2. transition: all 0.3s ease-in-out; (common shorthand).<br>3. Define the state change on hover/focus/active.</div> <p>Example of CSS transitions:</p><div class='code'>.button {<br>  transition: all 0.3s ease-in-out;<br>}<br><br>.button:hover {<br>  transform: translateY(-2px);<br>  box-shadow: 0 6px 12px rgba(0,0,0,0.15);<br>}</div>",
     "parent": "6",
     "children": [],
-    "example": "https://i.imgur.com/5QvZ9kR.png"
+    "example": "https://mdn.mozillademos.org/files/16069/transition.png"
+  },
+  {
+    "id": "6.5",
+    "title": "Transformations",
+    "details": "Modify an element's appearance by translating, rotating, scaling, or skewing it.<div>1. transform: translate(50px, 20px); (move element).<br>2. transform: rotate(45deg);<br>3. transform: scale(1.2); (enlarge).<br>4. transform: skew(10deg);</div> <p>Examples of CSS transforms:</p><div class='code'>.icon:hover {<br>  transform: rotate(45deg) scale(1.1);<br>}<br><br>.modal {<br>  transform: translate(-50%, -50%);<br>}</div>",
+    "parent": "6",
+    "children": [],
+    "example": "https://mdn.mozillademos.org/files/16068/transform.png"
   },
   {
     "id": "7",
-    "title": "Special Effects",
-    "details": "Creative visual enhancements",
+    "title": "Advanced Concepts & Best Practices",
+    "details": "Professional techniques for writing maintainable, scalable, and efficient CSS.",
     "parent": "0",
     "children": ["7.1", "7.2", "7.3", "7.4"]
   },
   {
     "id": "7.1",
-    "title": "Smoke Effects",
-    "details": "1. New layer<br>2. Use Smoke Brush (download if needed)<br>3. Paint with white on black background<br>4. Filter > Blur > Gaussian Blur (3-8px)<br>5. Set blend mode to Screen<br>6. Adjust opacity (50-80%)",
+    "title": "Custom Properties (CSS Variables)",
+    "details": "CSS variables allow you to store values for reuse throughout your stylesheet.<div>1. Define: --main-color: #ff0000; (usually in :root selector).<br>2. Use: color: var(--main-color);<br>3. Allows for dynamic theme switching with JavaScript.</div> <p>Example of CSS custom properties:</p><div class='code'>:root {<br>  --primary-color: #3498db;<br>  --spacing: 16px;<br>  --border-radius: 8px;<br>}<br><br>.button {<br>  background-color: var(--primary-color);<br>  padding: var(--spacing) calc(var(--spacing) * 2);<br>  border-radius: var(--border-radius);<br>}</div>",
     "parent": "7",
     "children": [],
-    "example": "https://i.imgur.com/9QvX2kR.png"
+    "example": "https://mdn.mozillademos.org/files/16070/css-variables.png"
   },
   {
     "id": "7.2",
-    "title": "Water Reflections",
-    "details": "1. Duplicate layer<br>2. Edit > Transform > Flip Vertical<br>3. Position below original<br>4. Add layer mask > Gradient (black to white)<br>5. Filter > Distort > Ripple (Small, 10-20%)<br>6. Reduce opacity (50-70%)",
+    "title": "Methodologies (BEM)",
+    "details": "Naming conventions that make CSS more maintainable and reduce specificity conflicts.<div>1. BEM: Block__Element--Modifier.<br>2. .card {} (Block)<br>3. .card__title {} (Element)<br>4. .card--featured {} (Modifier)<br>5. Creates self-documenting, low-specificity code.</div> <p>BEM naming example:</p><div class='code'>.card { } /* Block */<br>.card__title { } /* Element */<br>.card--featured { } /* Modifier */<br>.card__image { }<br>.card__image--rounded { }</div>",
     "parent": "7",
     "children": [],
-    "example": "https://i.imgur.com/8QvZ9kR.png"
+    "example": "https://en.bem.info/S3hTKiL4qIusLleeLqLwfAceab8.png"
   },
   {
     "id": "7.3",
-    "title": "Rain Effects",
-    "details": "1. New layer (fill with black)<br>2. Filter > Noise > Add Noise (100%, Monochromatic)<br>3. Filter > Blur > Motion Blur (Angle 60-75°, Distance 15-30px)<br>4. Set blend mode to Screen<br>5. Adjust opacity (50-70%)<br>6. Add Gaussian Blur (1-2px) for softness",
+    "title": "Preprocessors (Sass/SCSS)",
+    "details": "CSS extensions that add features like variables, nesting, mixins, and functions.<div>1. Variables: $primary-color: #333;<br>2. Nesting: nav { ul { ... } }<br>3. Mixins: Reusable code snippets.<br>4. Must be compiled to CSS.</div> <p>SCSS example:</p><div class='code'>$primary-color: #3498db;<br>$spacing: 16px;<br><br>@mixin center-content {<br>  display: flex;<br>  justify-content: center;<br>  align-items: center;<br>}<br><br>.modal {<br>  @include center-content;<br>  background: lighten($primary-color, 20%);<br>  padding: $spacing;<br>}</div>",
     "parent": "7",
-    "children": [],
-    "example": "https://i.imgur.com/7QvX2kR.png"
+    "children": []
   },
   {
     "id": "7.4",
-    "title": "Soft Focus",
-    "details": "1. Duplicate layer<br>2. Filter > Blur > Gaussian Blur (10-20px)<br>3. Set opacity to 30-50%<br>4. Add layer mask<br>5. Paint with black brush on mask to reveal sharp areas (eyes, lips)<br>6. Optional: Add slight vignette",
+    "title": "Browser Support & Prefixes",
+    "details": "Strategies for ensuring CSS works across different browsers and versions.<div>1. Check caniuse.com for property support.<br>2. Use Autoprefixer (PostCSS) to automatically add vendor prefixes (-webkit-, -moz-, -ms-).</div> <p>Example of vendor prefixes:</p><div class='code'>.element {<br>  -webkit-transition: all 0.3s ease;<br>  -moz-transition: all 0.3s ease;<br>  -ms-transition: all 0.3s ease;<br>  -o-transition: all 0.3s ease;<br>  transition: all 0.3s ease;<br>}</div>",
     "parent": "7",
-    "children": [],
-    "example": "https://i.imgur.com/6QvZ3kR.png"
+    "children": []
   },
   {
     "id": "8",
-    "title": "Branding and Social Media",
-    "details": "Design for business applications",
+    "title": "Common Components & Patterns",
+    "details": "Ready-to-use CSS solutions for frequently needed UI elements.",
     "parent": "0",
-    "children": ["8.1", "8.2", "8.3"]
+    "children": ["8.1", "8.2", "8.3", "8.4"]
   },
   {
     "id": "8.1",
-    "title": "Logo Design",
-    "details": "1. Start with text or shape<br>2. Add Layer Styles (Stroke, Bevel, Gradient)<br>3. Keep it simple and scalable<br>4. Test in black & white first<br>5. Finalize in vector if possible<br>6. Export as PNG-24 with transparency",
+    "title": "Navigation Bars",
+    "details": "Creating flexible, responsive navigation menus that work across devices.<div>1. Use flexbox or grid for layout.<br>2. Style list items and anchors.<br>3. Create dropdowns with :hover and absolute positioning.</div> <p>Example of flexbox navigation:</p><div class='code'>.nav {<br>  display: flex;<br>  justify-content: space-between;<br>  align-items: center;<br>}<br><br>.nav-item {<br>  padding: 10px 15px;<br>  text-decoration: none;<br>}</div>",
     "parent": "8",
     "children": [],
-    "example": "https://i.imgur.com/5QvX3kR.png"
+    "example": "https://mdn.mozillademos.org/files/16071/navbar.png"
   },
   {
     "id": "8.2",
-    "title": "Watermarking",
-    "details": "1. Create transparent PNG logo (see 8.1)<br>2. Open image to watermark<br>3. Place logo in corner<br>4. Set opacity 20-40%<br>5. Optional: Add slight drop shadow for visibility<br>6. Save as copy to preserve original",
+    "title": "Cards",
+    "details": "Container components that group related content with consistent styling.<div>1. Container with border, border-radius, and box-shadow.<br>2. Consistent padding and margin.<br>3. Image on top, content below.</div> <p>Example card component:</p><div class='code'>.card {<br>  border-radius: 8px;<br>  box-shadow: 0 2px 8px rgba(0,0,0,0.1);<br>  overflow: hidden;<br>}<br><br>.card__image {<br>  width: 100%;<br>  height: 200px;<br>  object-fit: cover;<br>}<br><br>.card__content {<br>  padding: 16px;<br>}</div>",
     "parent": "8",
     "children": [],
-    "example": "https://i.imgur.com/9QvZ9kR.png"
+    "example": "https://mdn.mozillademos.org/files/16072/card.png"
   },
   {
     "id": "8.3",
-    "title": "Social Media Templates",
-    "details": "INSTAGRAM POST:<br>1. Canvas size: 1080x1080px<br>2. Add margins (safe zone)<br>3. Create consistent color scheme<br><br>STORY:<br>1. 1080x1920px<br>2. Place key elements in center<br>3. Use bold, readable text<br>4. Export as JPG (Quality 80+)",
+    "title": "Buttons",
+    "details": "Styling interactive elements with consistent states and feedback.<div>1. Reset default styles: border: none; background.<br>2. Add padding for clickable area.<br>3. Use :hover and :active states for feedback.</div> <p>Example button styles:</p><div class='code'>.btn {<br>  display: inline-block;<br>  padding: 12px 24px;<br>  border: none;<br>  border-radius: 4px;<br>  background: #3498db;<br>  color: white;<br>  cursor: pointer;<br>  transition: all 0.2s;<br>}<br><br>.btn:hover {<br>  background: #2980b9;<br>  transform: translateY(-1px);<br>}</div>",
     "parent": "8",
     "children": [],
-    "example": "https://i.imgur.com/8QvX9kR.png"
+    "example": "https://mdn.mozillademos.org/files/16073/buttons.png"
+  },
+  {
+    "id": "8.4",
+    "title": "Forms",
+    "details": "Creating accessible, user-friendly form elements with consistent styling.<div>1. Style inputs, textareas, labels.<br>2. Use :focus state for accessibility.<br>3. Layout with flexbox/grid.</div> <p>Example form styling:</p><div class='code'>input, textarea {<br>  width: 100%;<br>  padding: 12px;<br>  border: 1px solid #ddd;<br>  border-radius: 4px;<br>  font-family: inherit;<br>}<br><br>input:focus {<br>  outline: none;<br>  border-color: #3498db;<br>  box-shadow: 0 0 0 2px rgba(52,152,219,0.2);<br>}</div>",
+    "parent": "8",
+    "children": [],
+    "example": "https://mdn.mozillademos.org/files/16074/form.png"
   },
   {
     "id": "9",
-    "title": "Workflow Optimization",
-    "details": "Professional techniques and shortcuts",
+    "title": "Animation & Interactivity",
+    "details": "Creating engaging, dynamic user experiences with CSS animations and interactive states.",
     "parent": "0",
     "children": ["9.1", "9.2", "9.3"]
   },
   {
     "id": "9.1",
-    "title": "Layer Management",
-    "details": "1. Name all layers clearly<br>2. Use folders (Layer Groups) for organization<br>3. Color-code layers (right-click layer > Color)<br>4. Use Ctrl+Alt+Click to select layer content<br>5. Alt+Click between layers to create clipping masks",
+    "title": "Keyframe Animations",
+    "details": "Create complex multi-step animations by defining styles at various points during the animation sequence. <div>1. @keyframes myAnimation { from { ... } to { ... } }<br>2. Apply with animation: myAnimation 2s infinite;<br>3. Control with animation-direction, animation-fill-mode, etc.</div> <p>Example keyframe animation:</p><div class='code'>@keyframes slideIn {<br>  from {<br>    transform: translateX(-100%);<br>    opacity: 0;<br>  }<br>  to {<br>    transform: translateX(0);<br>    opacity: 1;<br>  }<br>}<br><br>.element {<br>  animation: slideIn 0.5s ease-out forwards;<br>}</div>",
     "parent": "9",
     "children": [],
-    "example": "https://i.imgur.com/7QvZ9kR.png"
+    "example": "https://mdn.mozillademos.org/files/16076/keyframes.png"
   },
   {
     "id": "9.2",
-    "title": "Batch Processing",
-    "details": "1. File > Scripts > Image Processor<br>2. Select source folder<br>3. Set file type (JPG/PNG)<br>4. Choose quality/resize options<br>5. Run<br>Alternative: Record Actions for repetitive tasks",
+    "title": "Hover Effects",
+    "details": "Visual feedback when users interact with elements, providing affordance and enhancing experience.<div>1. a:hover { color: red; }<br>2. Combine with transitions for smooth changes.<br>3. Use transform: scale() or translateY() for modern effects.</div> <p>Example hover effects:</p><div class='code'>.card {<br>  transition: transform 0.3s, box-shadow 0.3s;<br>}<br><br>.card:hover {<br>  transform: translateY(-5px);<br>  box-shadow: 0 10px 20px rgba(0,0,0,0.1);<br>}</div>",
     "parent": "9",
-    "children": [],
-    "example": "https://i.imgur.com/6QvX2kR.png"
+    "children": []
   },
   {
     "id": "9.3",
-    "title": "Export Optimization",
-    "details": "JPG:<br>1. Quality 80-90%<br>2. Progressive for web<br>3. Baseline Optimized<br><br>PNG:<br>1. PNG-8 for simple graphics (256 colors)<br>2. PNG-24 for transparency<br>3. Use 'Export As' for size preview<br><br>Always check file size before uploading",
+    "title": "Filter Effects",
+    "details": "Apply visual effects like blurring, color shifting, and brightness adjustment to elements.<div>1. filter: blur(5px);<br>2. filter: grayscale(100%);<br>3. filter: brightness(150%);<br>4. filter: drop-shadow(...); (similar to box-shadow but on content shape).</div> <p>Example filter effects:</p><div class='code'>img:hover {<br>  filter: grayscale(100%) blur(1px);<br>}<br><br>.overlay {<br>  backdrop-filter: blur(5px);<br>}<br><br>button:active {<br>  filter: brightness(0.9);<br>}</div>",
     "parent": "9",
     "children": [],
-    "example": "https://i.imgur.com/5QvZ2kR.png"
+    "example": "https://mdn.mozillademos.org/files/16075/filter.png"
   }
 ]
