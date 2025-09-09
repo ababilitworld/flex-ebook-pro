@@ -3,156 +3,123 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  body {
+}
+body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #eef2f3, #8e9eab);
     color: #2c3e50;
     min-height: 100vh;
     line-height: 1.5;
-  }
-  
-  /* ========== Layout ========== */
-  .ebook {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 30px;
-    gap: 30px;
-  }
-  
-  /* ========== Index Panel ========== */
-  .index {
-    flex: 1 1 300px;
+}
+
+/* ========== Mobile First Grid Container ========== */
+.ababilithub .layout .page.ebook {
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'sidebar'
+        'main'
+        'footer';
+    grid-gap: 1.20rem;
+    padding: 1rem;
+}
+
+.ababilithub .layout .page.ebook .header { grid-area: header; }
+.ababilithub .layout .page.ebook .sidebar { grid-area: sidebar; }
+.ababilithub .layout .page.ebook .main { grid-area: main; }
+.ababilithub .layout .page.ebook .footer { grid-area: footer; }
+
+/* ========== Index Panel (Sidebar) ========== */
+.sidebar {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     padding: 25px;
     overflow-y: auto;
-    max-height: 90vh;
-  }
-  
-  .index h2 {
+    max-height: 80vh;
+    position: sticky;
+    top: 1rem;
+}
+
+.sidebar h2 {
     font-size: 1.7rem;
     text-align: center;
     color: #007BFF;
     margin-bottom: 25px;
-  }
-  
-  /* ========== Content Panel ========== */
-  .content {
-    flex: 2 1 600px;
+}
+
+/* ========== Content Panel (Main) ========== */
+.main {
     background: #ffffff;
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     min-height: 400px;
-  }
-  
-  .content-details {
-  margin-top: 15px;
-  padding: 20px;
-  background: #f0faff;
-  border-left: 5px solid #007BFF;
-  border-radius: 8px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-  line-height: 1.6;
-  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.1);
+}
+
+.content-details {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f0faff;
+    border-left: 5px solid #007BFF;
+    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    line-height: 1.6;
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.1);
 }
 
 .content-details .code {
-  display: block;
-  margin: 15px 0;
-  padding: 16px;
-  background: #777777;
-  color: #000000;
-  border-radius: 6px;
-  font-family: 'Fira Code', 'Monaco', 'Consolas', 'Ubuntu Mono', monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  tab-size: 2;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-  border: 1px solid #1d3b53;
-  position: relative;
+    display: block;
+    margin: 15px 0;
+    padding: 16px;
+    background: #777777;
+    color: #000000;
+    border-radius: 6px;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    tab-size: 2;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1d3b53;
+    position: relative;
 }
 
 .content-details .code::before {
-  content: 'CSS';
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4px 8px;
-  background: #007BFF;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  border-bottom-left-radius: 4px;
-  border-top-right-radius: 5px;
+    content: 'CSS';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 8px;
+    background: #007BFF;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 5px;
 }
 
 /* Syntax highlighting for CSS code */
-.content-details .code .selector {
-  color: #7fdbca;
-}
-
-.content-details .code .property {
-  color: #addb67;
-}
-
-.content-details .code .value {
-  color: #f78c6c;
-}
-
-.content-details .code .comment {
-  color: #637777;
-  font-style: italic;
-}
-
-.content-details .code .punctuation {
-  color: #c792ea;
-}
-
-.content-details .code .function {
-  color: #82aaff;
-}
-
-.content-details .code .keyword {
-  color: #c792ea;
-  font-style: italic;
-}
-
-.content-details .code .string {
-  color: #ecc48d;
-}
-
-.content-details .code .number {
-  color: #f78c6c;
-}
+.content-details .code .selector { color: #7fdbca; }
+.content-details .code .property { color: #addb67; }
+.content-details .code .value { color: #f78c6c; }
+.content-details .code .comment { color: #637777; font-style: italic; }
+.content-details .code .punctuation { color: #c792ea; }
+.content-details .code .function { color: #82aaff; }
+.content-details .code .keyword { color: #c792ea; font-style: italic; }
+.content-details .code .string { color: #ecc48d; }
+.content-details .code .number { color: #f78c6c; }
 
 /* Scrollbar styling for code blocks */
-.content-details .code::-webkit-scrollbar {
-  height: 8px;
-}
+.content-details .code::-webkit-scrollbar { height: 8px; }
+.content-details .code::-webkit-scrollbar-track { background: #011627; border-radius: 0 0 6px 6px; }
+.content-details .code::-webkit-scrollbar-thumb { background: #1d3b53; border-radius: 4px; }
+.content-details .code::-webkit-scrollbar-thumb:hover { background: #265c89; }
 
-.content-details .code::-webkit-scrollbar-track {
-  background: #011627;
-  border-radius: 0 0 6px 6px;
-}
-
-.content-details .code::-webkit-scrollbar-thumb {
-  background: #1d3b53;
-  border-radius: 4px;
-}
-
-.content-details .code::-webkit-scrollbar-thumb:hover {
-  background: #265c89;
-}
-  
-  /* ========== Accordion Styles ========== */
-  .accordion-button {
+/* ========== Accordion Styles ========== */
+.accordion-button {
     background: linear-gradient(135deg, #007BFF, #0056b3);
     color: #fff;
     padding: 12px 18px;
@@ -165,32 +132,25 @@
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
-  }
-  
-  .accordion-button:hover {
-    filter: brightness(1.1);
-  }
-  
-  .accordion-button.open {
-    background: linear-gradient(135deg, #0056b3, #004494);
-  }
-  
-  /* ========== Accordion Arrow Connector ========== */
-  .accordion-content {
+}
+
+.accordion-button:hover { filter: brightness(1.1); }
+.accordion-button.open { background: linear-gradient(135deg, #0056b3, #004494); }
+
+/* ========== Accordion Arrow Connector ========== */
+.accordion-content {
     display: none;
     margin-left: 30px;
     padding-left: 15px;
     border-left: 2px dashed #007BFF;
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  .accordion-button.open + .accordion-content {
-    display: block;
-  }
-  
-  /* Horizontal connector from button to vertical line */
-  .accordion-button::before {
+}
+
+.accordion-button.open + .accordion-content { display: block; }
+
+/* Horizontal connector from button to vertical line */
+.accordion-button::before {
     content: '';
     position: absolute;
     left: -14px;
@@ -201,14 +161,12 @@
     transform: translateY(-50%);
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  .accordion-button.open::before {
-    opacity: 1;
-  }
-  
-  /* Vertical line going down into nested accordion */
-  .accordion-button + .accordion-content::before {
+}
+
+.accordion-button.open::before { opacity: 1; }
+
+/* Vertical line going down into nested accordion */
+.accordion-button + .accordion-content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -217,34 +175,98 @@
     height: 100%;
     background-color: #007BFF;
     opacity: 0.7;
-  }
-  
-  /* ========== Transitions ========== */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-4px);
+}
+
+/* ========== Transitions ========== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablet devices (768px and up) */
+@media (min-width: 768px) {
+    .ababilithub .layout .page.ebook {
+        grid-template-areas: 
+            'header header'
+            'sidebar main'
+            'footer footer';
+        grid-template-columns: 300px 1fr;
+        padding: 1.5rem;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    
+    .sidebar {
+        max-height: calc(100vh - 3rem);
     }
-  }
-  
-  /* ========== Responsive ========== */
-  @media (max-width: 768px) {
-    .ebook {
-      flex-direction: column;
-      padding: 20px;
+}
+
+/* Desktop devices (1024px and up) */
+@media (min-width: 1024px) {
+    .ababilithub .layout .page.ebook {
+        grid-template-columns: 350px 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
     }
-  
-    .index,
-    .content {
-      width: 100%;
+}
+
+/* Mobile menu toggle for sidebar */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
     }
-  
-    .index {
-      max-height: unset;
+    
+    .sidebar.active {
+        transform: translateX(0);
+        left: 0;
     }
-  }
-  
+    
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    /* Overlay when sidebar is open */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 998;
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+}
