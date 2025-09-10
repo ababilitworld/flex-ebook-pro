@@ -15,7 +15,7 @@
 }
 
 .ababilithub .template.page .layout.ebook .sidebar .accordion-button:hover { filter: brightness(1.1); }
-.ababilithub .template.page .layout.ebook .sidebar .accordion-button.open { background: linear-gradient(135deg, var(--faih-primary-dark), var(--faih-primary-light)); }
+.ababilithub .template.page .layout.ebook .sidebar .accordion-button.open { background: linear-gradient(135deg, var(--faih-primary-dark), var(--faih-primary)); }
 
 /* ========== Accordion Arrow Connector ========== */
 .ababilithub .template.page .layout.ebook .sidebar .accordion-content {

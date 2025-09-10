@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="Asset/Appearence/Animation/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/Progress/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/Info/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/Badge/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/H2/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/Accordion/Css/Style.css">
@@ -31,16 +34,36 @@
         <div class="theme <?php echo $colorScheme;?>">            
             <div class="template page">
                 <div class="layout ebook">
-                    <div class="header">
-                        <h1 class="title"><?php echo $ebook_title;?></h1>
+                    <div class="header">                                                
+                        <div class="info">
+                            <h1 class="title"><?php echo $ebook_title;?></h1>
+                            <div class="book-details">
+                                <div class="progress-section">
+                                    <div class="progress-header">
+                                        <span>Rating ⭐⭐⭐ 4.95/5 (2.3k reviews)</span>
+                                        <span class="progress-percent">99%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 99%"></div>
+                                    </div>
+                                </div>
+                                <div class="book-cover">
+                                    <img src="Asset/Appearence/Image/BookCover/css3-mastery-cover.jpg" alt="Mastering CSS3 Book Cover" class="cover-image">
+                                    <div class="badge">Bestseller</div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
-                    
-                    <div class="sidebar">
+                    <!-- Book Meta Information Section -->
                         
+                    <div class="sidebar">
+                                                
                         <h2>Table of Contents</h2>
                         <input type="text" id="searchInput" placeholder="Search Topic or subtopic..." />
                         <div id="topicList"></div>
                     </div>
+                    
                     <div class="main">
                         <button class="sidebar-toggle" id="sidebarToggle">☰</button>
                         <div class="sidebar-overlay" id="sidebarOverlay"></div>
@@ -49,16 +72,19 @@
                             <h3>Select a Chapter, Topic, or Subtopic to view details.</h3>
                         </div>
                     </div>
+                    
                     <div class="footer"></div>
                 </div>
             </div>
         </div>
     </div>
+    
     <script type="module">
         import App from './src/assets/js/app/App.js';
         const app = new App();
         app.run('topicList');
     </script>
+    
     <script src="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Main/Component/Toggle/Js/Script.js"></script>
     <script src="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/Search/Js/Script.js"></script>
 </body>

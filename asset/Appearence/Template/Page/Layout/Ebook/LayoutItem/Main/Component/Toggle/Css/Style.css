@@ -1,12 +1,12 @@
 /* Mobile menu toggle for main*/
 .ababilithub .template.page .layout.ebook .main .sidebar-toggle {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
-    background: #007BFF;
-    color: white;
+    z-index: 9999;
+    background: var(--faih-background-dark);
+    color: var(--faih-text-light);
     border: none;
     border-radius: 50%;
     width: 50px;

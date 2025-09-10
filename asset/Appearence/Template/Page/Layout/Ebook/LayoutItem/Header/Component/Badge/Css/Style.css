@@ -1,0 +1,12 @@
+.ababilithub .template.page .layout.ebook .header .badge {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 4px 8px;
+    background: var(--faih-background-light);
+    color: var(--faih-text-dark);
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
