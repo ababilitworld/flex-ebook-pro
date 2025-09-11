@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="Asset/Appearence/Animation/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Css/Style.css">
-    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/Progress/Css/Style.css">
-    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/Info/Css/Style.css">
-    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/Badge/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Title/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Rating/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Cover/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Author/Css/Style.css">
+    <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Header/Component/BookInfo/Component/Publisher/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/H2/Css/Style.css">
     <link rel="stylesheet" href="Asset/Appearence/Template/Page/Layout/Ebook/LayoutItem/Sidebar/Component/Accordion/Css/Style.css">
@@ -35,9 +38,9 @@
             <div class="template page">
                 <div class="layout ebook">
                     <div class="header">                                                
-                        <div class="info">
+                        <div class="component book-info">
                             <h1 class="title"><?php echo $ebook_title;?></h1>
-                            <div class="book-details">
+                            <div class="rating">
                                 <div class="progress-section">
                                     <div class="progress-header">
                                         <span>Rating ⭐⭐⭐ 4.95/5 (2.3k reviews)</span>
@@ -47,12 +50,13 @@
                                         <div class="progress-fill" style="width: 99%"></div>
                                     </div>
                                 </div>
-                                <div class="book-cover">
-                                    <img src="Asset/Appearence/Image/BookCover/css3-mastery-cover.jpg" alt="Mastering CSS3 Book Cover" class="cover-image">
-                                    <div class="badge">Bestseller</div>
-                                </div>
                             </div>
-                            
+                            <div class="cover">
+                                <img src="Asset/Appearence/Image/BookCover/css3-mastery-cover.jpg" alt="Mastering CSS3 Book Cover" class="cover-image">
+                                <div class="badge">Bestseller</div>
+                            </div>
+                            <div class="author"></div>
+                            <div class="publisher"></div>                            
                         </div>
                     </div>
                     <!-- Book Meta Information Section -->
